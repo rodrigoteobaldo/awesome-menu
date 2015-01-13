@@ -1,8 +1,4 @@
-@media only screen and (max-width: 480px) {
-
-  header {
-    position: fixed;
-  }
+@media only screen and (max-width: 768px) {
 
   .awesome-menu {
     position: fixed;
@@ -20,7 +16,7 @@
   .awesome-menu__logo {
     float: left;
     height: 68px;
-    margin: 1% 10px;
+    margin: 4px 10px;
   }
 
   .is-closed .awesome-menu__logo {
@@ -142,6 +138,24 @@
 
     color: #000;
     text-decoration: none;
+
+    -webkit-transition: background .2s;
+            transition: background .2s;
+  }
+
+  .awesome-menu__menu__item a:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .awesome-menu__menu__contact__list { padding: 10px 0; }
+
+  .awesome-menu__menu__contact__list a,
+  .awesome-menu__menu__contact__list span {
+    display: block;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 0;
+    -webkit-appearance: none;
   }
 
   .link__label { margin: 0; }

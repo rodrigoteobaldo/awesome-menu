@@ -1,12 +1,14 @@
 document.onload = (function () {
   'use strict';
 
-  window.$ = document.querySelectorAll.bind(document);
-
+  var $ = document.querySelectorAll.bind(document);
   var toggleMenuButton = $('.awesome-menu__toggle')[0];
   var awesomeMenu = $('.awesome-menu')[0];
 
-  toggleMenuButton.addEventListener('mousedown', function (event) {
+  toggleMenuButton.addEventListener('mousedown', toggleMenu);
+  toggleMenuButton.addEventListener('touchstart', toggleMenu);
+
+  function toggleMenu(event) {
 
     if (awesomeMenu.classList.contains('is-closed')) {
       awesomeMenu.classList.remove('is-closed');
@@ -15,6 +17,6 @@ document.onload = (function () {
       awesomeMenu.classList.remove('is-open');
       awesomeMenu.classList.add('is-closed');
     }
-  });
+  }
 
 })();
